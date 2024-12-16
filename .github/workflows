@@ -1,38 +1,38 @@
-name: Build and Distribute
+name: Build
 
-on:
-  push:
-    branches:
-      - master  # O la rama que usas como principal
-  pull_request:
+on: push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  release:
+    runs-on: ${{ matrix.os }}
+
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
-      # 1. Clonar el repositorio
-      - name: Checkout repository
+      - name: Check out Git repository
         uses: actions/checkout@v3
 
-      # 2. Configurar Node.js
-      - name: Set up Node.js
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Cambia según la versión que uses
-          cache: 'npm'
+          node-version: 20
 
-      # 3. Instalar dependencias
-      - name: Install dependencies
-        run: npm install
-
-      # 4. Ejecutar la build
-      - name: Build application
-        run: npm run dist
-
-      # 5. Subir artefactos (opcional, para guardar los resultados de la build)
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          name: zlauncher-build
-          path: dist/  # Cambia según la carpeta donde se generan los archivos
+          python-version: 3.x
+
+      - name: Install Dependencies
+        run: npm ci
+        shell: bash
+
+      - name: Build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run dist
+        shell: bash

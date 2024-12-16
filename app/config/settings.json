@@ -1,0 +1,31 @@
+{
+    "APP_DISPLAY_NAME": "ZLauncher 🌎",
+  
+    "WELCOME_HEADER_TEXT": "Bienvenido a ZLauncher",
+    "WELCOME_DESC_TEXT": "Launcher desarrollado por zergiv2",
+    "WELCOME_DESC_CTA": "Estás tan solo a unos clicks de ingresar...",
+  
+    "WEBSITE_ENABLE": true,
+  "WEBSITE_URL": "https://techterra.x10.mx/",
+  
+    "FB_ENABLE": false,
+  "FB_URL": "",
+  
+    "TIKTOK_ENABLE": true,
+    "TIKTOK_URL": "https://www.tiktok.com/@zergi_v2",
+  
+    "TWITTER_ENABLE": false,
+    "TWITTER_URL": "",
+  
+    "INSTAGRAM_ENABLE": false,
+    "INSTAGRAM_URL": "",
+  
+    "YOUTUBE_ENABLE": true,
+    "YOUTUBE_URL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  
+    "DISCORD_ENABLE": true,
+    "DISCORD_URL": "https://discord.com/invite/vHCbvhzrj5",
+  
+    "KICK_ENABLE": false,
+    "KICK_URL": "https://kick.com/zergi-v2"
+  }

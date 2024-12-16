@@ -1,0 +1,45 @@
+<div id="loginContainer" style="display: none;">
+    <div id="loginCancelContainer" style="display: none;">
+        <button id="loginCancelButton">
+            <div id="loginCancelIcon">X</div>
+            <span id="loginCancelText">Cancelar</span>
+        </button>
+    </div>
+    <div id="loginContent">
+        <form id="loginForm">
+            <img id="loginImageSeal" src="assets/images/SealCircle.png"/>
+            <span id="loginSubheader">NO PREMIUM (PIRATA)</span>
+            <div class="loginFieldContainer">
+                <svg id="profileSVG" class="loginSVG" viewBox="40 37 65.36 61.43">
+                    <g>
+                        <path d="M86.77,58.12A13.79,13.79,0,1,0,73,71.91,13.79,13.79,0,0,0,86.77,58.12M97,103.67a3.41,3.41,0,0,0,3.39-3.84,27.57,27.57,0,0,0-54.61,0,3.41,3.41,0,0,0,3.39,3.84Z"/>
+                    </g>
+                </svg>
+                <span class="loginErrorSpan" id="loginEmailError">* Valor Inválido</span>
+                <input id="loginUsername" class="loginField" type="text" placeholder="NOMBRE"/>
+            </div>
+            <button id="loginButton" enabled>
+                <div id="loginButtonContent">
+                    ENTRAR
+                    <svg id="loginSVG" viewBox="0 0 24.87 13.97">
+                        <defs>
+                            <style>.arrowLine{fill:none;stroke:#FFF;stroke-width:2px;transition: 0.25s ease;}</style>
+                        </defs>
+                        <polyline class="arrowLine" points="0.71 13.26 12.56 1.41 24.16 13.02"/>
+                    </svg>
+                    <div class="circle-loader">
+                        <div class="checkmark draw"></div>
+                    </div>
+                    <!--<div class="spinningCircle" id="loginSpinner"></div>-->
+                </div>
+            </button>
+            <div id="loginDisclaimer">
+                <span class="loginSpanDim" id="loginRegisterSpan">
+                    <a href="https://minecraft.net/store/minecraft-java-edition/">¿Necesitas una cuenta?</a>
+                </span>
+                <p class="loginDisclaimerText">ZLauncher no está afiliado con Mojang AB.</p>
+            </div>
+        </form>
+    </div>
+    <script src="./assets/js/scripts/login.js"></script>
+</div>

@@ -1,0 +1,408 @@
+<div id="settingsContainer" style="display: none;">
+    <div id="settingsContainerLeft">
+        <div id="settingsNavContainer">
+            <div id="settingsNavHeader">
+                <span id="settingsNavHeaderText">Ajustes</span>
+            </div>
+            <div id="settingsNavItemsContainer">
+                <div id="settingsNavItemsContent">
+                    <button class="settingsNavItem" rSc="settingsTabAccount" id="settingsNavAccount" selected>Cuenta</button>
+                    <button class="settingsNavItem" rSc="settingsTabMinecraft">Minecraft</button>
+                    <button class="settingsNavItem" rSc="settingsTabMods">Mods</button>
+                    <button class="settingsNavItem" rSc="settingsTabJava">Java</button>
+                    <button class="settingsNavItem" rSc="settingsTabLauncher">Launcher</button>
+                    <div class="settingsNavSpacer"></div>
+                    <button class="settingsNavItem" rSc="settingsTabAbout">Acerca de</button>
+                    <button class="settingsNavItem" rSc="settingsTabUpdate" id="settingsNavUpdate">Actualizaciones</button>
+                    <div id="settingsNavContentBottom">
+                        <div class="settingsNavDivider"></div>
+                        <button id="settingsNavDone">Listo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="settingsContainerRight">
+        <div id="settingsTabAccount" class="settingsTab">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Ajustes de Cuenta</span>
+                <span class="settingsTabHeaderDesc">Añade nuevas cuentas o administra las existentes.</span>
+            </div>
+            <div class="settingsAuthAccountTypeContainer">
+                <div class="settingsAuthAccountTypeHeader">
+                    <div class="settingsAuthAccountTypeHeaderLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 23 23">
+                            <path fill="#f35325" d="M1 1h10v10H1z" />
+                            <path fill="#81bc06" d="M12 1h10v10H12z" />
+                            <path fill="#05a6f0" d="M1 12h10v10H1z" />
+                            <path fill="#ffba08" d="M12 12h10v10H12z" />
+                        </svg>
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="settingsAuthAccountTypeHeaderRight">
+                        <button class="settingsAddAuthAccount" id="settingsAddMicrosoftAccount">+ Añadir cuenta Microsoft</button>
+                    </div>
+                </div>
+                
+                <div class="settingsCurrentAccounts" id="settingsCurrentMicrosoftAccounts">
+                    <!-- Microsoft auth accounts populated here. -->
+                </div>
+            </div>
+
+            <div class="settingsAuthAccountTypeContainer">
+                <div class="settingsAuthAccountTypeHeader">
+                    <div class="settingsAuthAccountTypeHeaderLeft">
+                        <svg width="22" height="22" viewBox="0 0 262 283" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#a17a54" stroke="#a17a54" stroke-width="0.09375" opacity="1.00" d=" M 16.63 17.00 C 30.82 16.98 45.02 16.98 59.22 17.00 C 59.30 26.75 59.18 36.49 59.18 46.23 C 44.99 46.26 30.81 46.19 16.63 46.26 C 16.77 36.51 16.48 26.76 16.63 17.00 Z" />
+                            <path fill="#382a1b" stroke="#382a1b" stroke-width="0.09375" opacity="1.00" d=" M 16.63 46.26 C 30.81 46.19 44.99 46.26 59.18 46.23 C 80.45 46.19 101.72 46.29 122.99 46.17 C 122.96 55.19 122.97 64.21 122.96 73.22 C 102.82 72.95 83.34 85.32 74.72 103.46 C 71.15 110.75 69.35 118.86 69.34 126.96 C 69.28 139.04 69.36 151.12 69.31 163.20 C 76.72 162.78 84.47 165.94 88.47 172.40 C 91.82 177.19 91.81 183.23 91.69 188.84 C 102.11 188.84 112.53 188.84 122.95 188.84 C 122.85 198.06 123.14 207.28 122.94 216.50 C 101.68 216.55 80.41 216.43 59.15 216.56 C 44.95 216.64 30.75 216.68 16.55 216.53 C 16.69 159.78 16.53 103.02 16.63 46.26 Z" />
+                            <path fill="#000000" stroke="#000000" stroke-width="0.09375" opacity="1.00" d=" M 122.99 46.17 C 161.79 46.07 200.60 46.18 239.40 46.12 C 239.45 58.78 239.40 71.44 239.43 84.10 C 234.01 88.22 228.51 92.22 223.13 96.38 C 228.56 100.51 234.09 104.52 239.47 108.71 C 239.37 144.63 239.42 180.56 239.45 216.48 C 200.62 216.53 161.78 216.49 122.94 216.50 C 123.14 207.28 122.85 198.06 122.95 188.84 C 133.41 188.83 143.87 188.84 154.33 188.83 C 154.20 183.25 154.19 177.21 157.54 172.44 C 161.53 165.98 169.26 162.73 176.70 163.24 C 176.65 150.85 176.75 138.46 176.65 126.07 C 176.56 112.29 170.75 98.70 161.00 88.98 C 151.07 78.97 137.08 73.09 122.96 73.22 C 122.97 64.21 122.96 55.19 122.99 46.17 Z" />
+                            <path fill="#f9fbfc" stroke="#f9fbfc" stroke-width="0.09375" opacity="1.00" d=" M 74.72 103.46 C 83.34 85.32 102.82 72.95 122.96 73.22 C 137.08 73.09 151.07 78.97 161.00 88.98 C 170.75 98.70 176.56 112.29 176.65 126.07 C 176.75 138.46 176.65 150.85 176.70 163.24 C 169.26 162.73 161.53 165.98 157.54 172.44 C 154.19 177.21 154.20 183.25 154.33 188.83 C 143.87 188.84 133.41 188.83 122.95 188.84 C 112.53 188.84 102.11 188.84 91.69 188.84 C 91.81 183.23 91.82 177.19 88.47 172.40 C 84.47 165.94 76.72 162.78 69.31 163.20 C 69.36 151.12 69.28 139.04 69.34 126.96 C 69.35 118.86 71.15 110.75 74.72 103.46 M 94.11 116.22 C 87.29 117.73 81.75 123.92 81.21 130.93 C 79.98 140.15 87.77 149.20 97.05 149.45 C 106.59 150.24 115.48 141.48 114.74 131.92 C 114.73 121.75 103.93 113.53 94.11 116.22 M 144.14 116.24 C 138.34 117.59 133.46 122.24 131.87 127.99 C 129.12 136.75 134.96 146.88 143.89 148.93 C 153.91 151.92 165.07 143.41 164.87 132.98 C 165.56 122.38 154.35 113.35 144.14 116.24 M 115.59 156.69 C 115.60 161.65 115.63 166.62 115.57 171.58 C 120.55 171.44 125.54 171.74 130.52 171.64 C 130.49 166.64 130.52 161.64 130.50 156.65 C 127.94 156.66 125.39 156.66 122.84 156.67 C 120.75 156.66 118.65 156.66 116.56 156.67 L 115.59 156.69 Z" />
+                            <path fill="#382a1b" stroke="#382a1b" stroke-width="0.09375" opacity="1.00" d=" M 94.11 116.22 C 103.93 113.53 114.73 121.75 114.74 131.92 C 115.48 141.48 106.59 150.24 97.05 149.45 C 87.77 149.20 79.98 140.15 81.21 130.93 C 81.75 123.92 87.29 117.73 94.11 116.22 Z" />
+                            <path fill="#000000" stroke="#000000" stroke-width="0.09375" opacity="1.00" d=" M 144.14 116.24 C 154.35 113.35 165.56 122.38 164.87 132.98 C 165.07 143.41 153.91 151.92 143.89 148.93 C 134.96 146.88 129.12 136.75 131.87 127.99 C 133.46 122.24 138.34 117.59 144.14 116.24 Z" />
+                            <path fill="#000000" stroke="#000000" stroke-width="0.09375" opacity="1.00" d=" M 115.59 156.69 L 116.56 156.67 C 116.33 161.33 116.30 166.00 116.49 170.66 C 118.67 170.69 120.84 170.65 123.02 170.54 C 123.12 165.91 123.04 161.29 122.84 156.67 C 125.39 156.66 127.94 156.66 130.50 156.65 C 130.52 161.64 130.49 166.64 130.52 171.64 C 125.54 171.74 120.55 171.44 115.57 171.58 C 115.63 166.62 115.60 161.65 115.59 156.69 Z" />
+                            <path fill="#382a1b" stroke="#382a1b" stroke-width="0.09375" opacity="1.00" d=" M 116.56 156.67 C 118.65 156.66 120.75 156.66 122.84 156.67 C 123.04 161.29 123.12 165.91 123.02 170.54 C 120.84 170.65 118.67 170.69 116.49 170.66 C 116.30 166.00 116.33 161.33 116.56 156.67 Z" />
+                            <path fill="#a17a54" stroke="#a17a54" stroke-width="0.09375" opacity="1.00" d=" M 16.55 216.53 C 30.75 216.68 44.95 216.64 59.15 216.56 C 59.41 235.34 59.05 254.14 59.19 272.93 C 45.02 272.95 30.84 272.96 16.67 272.92 C 16.75 254.12 16.62 235.33 16.55 216.53 Z" />
+                        </svg>
+                        <span>Pirata</span>
+                    </div>
+                    <div class="settingsAuthAccountTypeHeaderRight">
+                        <button class="settingsAddAuthAccount" id="settingsAddMojangAccount">+ Añadir nombre pirata</button>
+                    </div>
+                </div>
+                
+                <div class="settingsCurrentAccounts" id="settingsCurrentMojangAccounts">
+                    <!-- Mojang auth accounts populated here. -->
+                </div>
+            </div>
+        </div>
+        <div id="settingsTabMinecraft" class="settingsTab" style="display: none;">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Ajustes de Minecraft</span>
+                <span class="settingsTabHeaderDesc">Ajustes relacionados al juego.</span>
+            </div>
+            <div id="settingsGameResolutionContainer">
+                <span class="settingsFieldTitle">Resolución</span>
+                <div id="settingsGameResolutionContent">
+                    <input type="number" id="settingsGameWidth" min="0" cValue="GameWidth">
+                    <div id="settingsGameResolutionCross">&#10006;</div>
+                    <input type="number" id="settingsGameHeight" min="0" cValue="GameHeight">
+                </div>
+            </div>
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Pantalla Completa.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <label class="toggleSwitch">
+                        <input type="checkbox" cValue="Fullscreen">
+                        <span class="toggleSwitchSlider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Conectar al servidor automáticamente al iniciar.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <label class="toggleSwitch">
+                        <input type="checkbox" cValue="AutoConnect">
+                        <span class="toggleSwitchSlider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Iniciar juego fuera del launcher.</span>
+                    <span class="settingsFieldDesc">Si esto está desactivado, cerrar el launcher también cerrará el juego.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <label class="toggleSwitch">
+                        <input type="checkbox" cValue="LaunchDetached">
+                        <span class="toggleSwitchSlider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Subir latest.log y crash-report.</span>
+                    <span class="settingsFieldDesc">Usa esto si el staff del servidor te lo pide.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <button id="uploadLogsButton">Subir logs</button>
+                </div>
+            </div>
+        </div>
+        <div id="settingsTabMods" class="settingsTab" style="display: none;">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Ajustes de Mods</span>
+                <span class="settingsTabHeaderDesc">Activar o desactivar mods.</span>
+            </div>
+            <div class="settingsSelServContainer">
+                <div class="settingsSelServContent">
+
+                </div>
+                <div class="settingsSwitchServerContainer">
+                    <div class="settingsSwitchServerContent">
+                        <button class="settingsSwitchServerButton">Cambiar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="settingsModsContainer">
+                <div id="settingsReqModsContainer">
+                    <div class="settingsModsHeader">Mods Requeridos</div>
+                    <div id="settingsReqModsContent">
+
+                    </div>
+                </div>
+                <div id="settingsOptModsContainer">
+                    <div class="settingsModsHeader">Mods Opcionales</div>
+                    <div id="settingsOptModsContent">
+                        
+                    </div>
+                </div>
+                <div id="settingsDropinModsContainer">
+                    <div class="settingsModsHeader">Mods Añadidos</div>
+                    <button id="settingsDropinFileSystemButton">+ Añadir mods <span id="settingsDropinRefreshNote">(F5 para Actualizar)</span></button>
+                    <div id="settingsDropinModsContent">
+                        
+                    </div>
+                </div>
+                <div id="settingsShadersContainer">
+                    <div class="settingsModsHeader">Shaderpacks</div>
+                    <div id="settingsShaderpackDesc">Activar o desactivar shaders. Ten en cuenta que los shaders requieren una máquina potente.</div>
+                    <div id="settingsShaderpackWrapper">
+                        <button id="settingsShaderpackButton"> + </button>
+                        <div class="settingsSelectContainer">
+                            <div class="settingsSelectSelected" id="settingsShadersSelected">Seleccionar Shaderpack</div>
+                            <div class="settingsSelectOptions" id="settingsShadersOptions" hidden>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="settingsTabJava" class="settingsTab" style="display: none;">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Ajustes de Java</span>
+                <span class="settingsTabHeaderDesc">Administrar configuración de Java (avanzado).</span>
+            </div>
+            <div class="settingsSelServContainer">
+                <div class="settingsSelServContent">
+
+                </div>
+                <div class="settingsSwitchServerContainer">
+                    <div class="settingsSwitchServerContent">
+                        <button class="settingsSwitchServerButton">Cambiar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="settingsMemoryContainer">
+                <div id="settingsMemoryTitle">Memoria</div>
+                <div id="settingsMemoryContent">
+                    <div id="settingsMemoryContentLeft">
+                        <div class="settingsMemoryContentItem">
+                            <span class="settingsMemoryHeader">RAM Máxima</span>
+                            <div class="settingsMemoryActionContainer">
+                                <div id="settingsMaxRAMRange" class="rangeSlider" cValue="MaxRAM" serverDependent min="3" max="8" value="3" step="0.5">
+                                    <div class="rangeSliderBar"></div>
+                                    <div class="rangeSliderTrack"></div>
+                                </div>
+                                <span id="settingsMaxRAMLabel" class="settingsMemoryLabel">3G</span>
+                            </div>
+                        </div>
+                        <div class="settingsMemoryContentItem">
+                            <span class="settingsMemoryHeader">RAM Mínima</span>
+                            <div class="settingsMemoryActionContainer">
+                                <div id="settingsMinRAMRange" class="rangeSlider" cValue="MinRAM" serverDependent min="3" max="8" value="3" step="0.5">
+                                    <div class="rangeSliderBar"></div>
+                                    <div class="rangeSliderTrack"></div>
+                                </div>
+                                <span id="settingsMinRAMLabel" class="settingsMemoryLabel">3G</span>
+                            </div>
+                        </div>
+                        <div id="settingsMemoryDesc">La cantidad de RAM recomendada son 5 gigabytes. Poner la RAM máxima y mínima en los mismos valores puede ayudar con el lag.</div>
+                    </div>
+                    <div id="settingsMemoryContentRight">
+                        <div id="settingsMemoryStatus">
+                            <div class="settingsMemoryStatusContainer">
+                                <span class="settingsMemoryStatusTitle">Total</span>
+                                <span id="settingsMemoryTotal" class="settingsMemoryStatusValue">16G</span>
+                            </div>
+                            <div class="settingsMemoryStatusContainer">
+                                <span class="settingsMemoryStatusTitle">Disponible</span>
+                                <span id="settingsMemoryAvail" class="settingsMemoryStatusValue">7.3G</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="settingsFileSelContainer">
+                <div class="settingsFileSelTitle">Ejecutable de Java</div>
+                <div class="settingsFileSelContent">
+                    <div id="settingsJavaExecDetails">Seleccionado: Java 8 Update 172 (x64)</div>
+                    <div class="settingsFileSelActions">
+                        <div class="settingsFileSelIcon">
+                            <svg class="settingsFileSelSVG" x="0px" y="0px" viewBox="0 0 305.001 305.001">
+                                <g>
+                                    <path d="M150.99,56.513c-14.093,9.912-30.066,21.147-38.624,39.734c-14.865,32.426,30.418,67.798,32.353,69.288c0.45,0.347,0.988,0.519,1.525,0.519c0.57,0,1.141-0.195,1.605-0.583c0.899-0.752,1.154-2.029,0.614-3.069c-0.164-0.316-16.418-31.888-15.814-54.539c0.214-7.888,11.254-16.837,22.942-26.312c10.705-8.678,22.839-18.514,29.939-30.02c15.586-25.327-1.737-50.231-1.914-50.479c-0.688-0.966-1.958-1.317-3.044-0.84c-1.085,0.478-1.686,1.652-1.438,2.811c0.035,0.164,3.404,16.633-5.97,33.6C169.301,43.634,160.816,49.603,150.99,56.513z"></path>
+                                    <path d="M210.365,67.682c0.994-0.749,1.286-2.115,0.684-3.205c-0.602-1.09-1.913-1.571-3.077-1.129c-2.394,0.91-58.627,22.585-58.627,48.776c0,18.053,7.712,27.591,13.343,34.556c2.209,2.731,4.116,5.09,4.744,7.104c1.769,5.804-2.422,16.294-4.184,19.846c-0.508,1.022-0.259,2.259,0.605,3.005c0.467,0.403,1.05,0.607,1.634,0.607c0.497,0,0.996-0.148,1.427-0.448c0.967-0.673,23.63-16.696,19.565-36.001c-1.514-7.337-5.12-12.699-8.302-17.43c-4.929-7.329-8.489-12.624-3.088-22.403C181.419,89.556,210.076,67.899,210.365,67.682z"></path>
+                                    <path d="M63.99,177.659c-0.964,2.885-0.509,5.75,1.315,8.283c6.096,8.462,27.688,13.123,60.802,13.123c0.002,0,0.003,0,0.004,0c4.487,0,9.224-0.088,14.076-0.262c52.943-1.896,72.58-18.389,73.39-19.09c0.883-0.764,1.119-2.037,0.57-3.067c-0.549-1.029-1.733-1.546-2.864-1.235c-18.645,5.091-53.463,6.898-77.613,6.898c-27.023,0-40.785-1.946-44.154-3.383c1.729-2.374,12.392-6.613,25.605-9.212c1.263-0.248,2.131-1.414,2.006-2.695c-0.125-1.281-1.201-2.258-2.488-2.258C106.893,164.762,68.05,165.384,63.99,177.659z"></path>
+                                    <path d="M241.148,160.673c-10.92,0-21.275,5.472-21.711,5.705c-1.01,0.541-1.522,1.699-1.245,2.811c0.278,1.111,1.277,1.892,2.423,1.893c0.232,0.001,23.293,0.189,25.382,13.365c1.85,11.367-21.82,29.785-31.097,35.923c-1.002,0.663-1.391,1.945-0.926,3.052c0.395,0.943,1.314,1.533,2.304,1.533c0.173,0,0.348-0.018,0.522-0.056c2.202-0.47,53.855-11.852,48.394-41.927C261.862,164.541,250.278,160.673,241.148,160.673z"></path>
+                                    <path d="M205.725,216.69c0.18-0.964-0.221-1.944-1.023-2.506l-12.385-8.675c-0.604-0.423-1.367-0.556-2.076-0.368c-0.129,0.034-13.081,3.438-31.885,5.526c-7.463,0.837-15.822,1.279-24.175,1.279c-18.799,0-31.091-2.209-32.881-3.829c-0.237-0.455-0.162-0.662-0.12-0.777c0.325-0.905,2.068-1.98,3.192-2.405c1.241-0.459,1.91-1.807,1.524-3.073c-0.385-1.266-1.69-2.012-2.978-1.702c-12.424,2.998-18.499,7.191-18.057,12.461c0.785,9.343,22.428,14.139,40.725,15.408c2.631,0.18,5.477,0.272,8.456,0.272c0.002,0,0.003,0,0.005,0c30.425,0,69.429-9.546,69.819-9.643C204.818,218.423,205.544,217.654,205.725,216.69z"></path>
+                                    <path d="M112.351,236.745c0.938-0.611,1.354-1.77,1.021-2.838c-0.332-1.068-1.331-1.769-2.453-1.755c-1.665,0.044-16.292,0.704-17.316,10.017c-0.31,2.783,0.487,5.325,2.37,7.556c5.252,6.224,19.428,9.923,43.332,11.31c2.828,0.169,5.7,0.254,8.539,0.254c30.39,0,50.857-9.515,51.714-9.92c0.831-0.393,1.379-1.209,1.428-2.127c0.049-0.917-0.409-1.788-1.193-2.267l-15.652-9.555c-0.543-0.331-1.193-0.441-1.813-0.314c-0.099,0.021-10.037,2.082-25.035,4.119c-2.838,0.385-6.392,0.581-10.562,0.581c-14.982,0-31.646-2.448-34.842-4.05C111.843,237.455,111.902,237.075,112.351,236.745z"></path>
+                                    <path d="M133.681,290.018c69.61-0.059,106.971-12.438,114.168-20.228c2.548-2.757,2.823-5.366,2.606-7.07c-0.535-4.194-4.354-6.761-4.788-7.04c-1.045-0.672-2.447-0.496-3.262,0.444c-0.813,0.941-0.832,2.314-0.016,3.253c0.439,0.565,0.693,1.51-0.591,2.795c-2.877,2.687-31.897,10.844-80.215,13.294c-6.619,0.345-13.561,0.519-20.633,0.52c-43.262,0-74.923-5.925-79.079-9.379c1.603-2.301,12.801-5.979,24.711-8.058c1.342-0.234,2.249-1.499,2.041-2.845c-0.208-1.346-1.449-2.273-2.805-2.096c-0.336,0.045-1.475,0.115-2.796,0.195c-19.651,1.2-42.36,3.875-43.545,13.999c-0.36,3.086,0.557,5.886,2.726,8.324c5.307,5.963,20.562,13.891,91.475,13.891C133.68,290.018,133.68,290.018,133.681,290.018z"></path>
+                                    <path d="M261.522,271.985c-0.984-0.455-2.146-0.225-2.881,0.567c-0.103,0.11-10.568,11.054-42.035,17.48c-12.047,2.414-34.66,3.638-67.211,3.638c-32.612,0-63.643-1.283-63.953-1.296c-1.296-0.063-2.405,0.879-2.581,2.155c-0.177,1.276,0.645,2.477,1.897,2.775c0.323,0.077,32.844,7.696,77.31,7.696c21.327,0,42.08-1.733,61.684-5.151c36.553-6.408,39.112-24.533,39.203-25.301C263.082,273.474,262.504,272.44,261.522,271.985z"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <input class="settingsFileSelVal" id="settingsJavaExecVal" type="text" value="null" cValue="JavaExecutable" serverDependent disabled>
+                        <button class="settingsFileSelButton" id="settingsJavaExecSel" dialogTitle="Select Java Executable" dialogDirectory="false">Elegir Archivo</button>
+                    </div>
+                </div>
+                <div class="settingsFileSelDesc">El ejecutable de Java es validado antes de iniciar. <strong id="settingsJavaReqDesc">Necesita Java 8 x64.</strong><br>El path debería terminar en <strong>bin<%= process.platform === 'win32' ? '\\javaw.exe' : '/java' %></strong>.</div>
+            </div>
+            <div id="settingsJVMOptsContainer">
+                <div id="settingsJVMOptsTitle">Opciones de JVM Adicionales</div>
+                <div id="settingsJVMOptsContent">
+                    <div class="settingsFileSelIcon">
+                        <svg class="settingsFileSelSVG" x="0px" y="0px" viewBox="0 0 305.001 305.001">
+                            <g>
+                                <path d="M150.99,56.513c-14.093,9.912-30.066,21.147-38.624,39.734c-14.865,32.426,30.418,67.798,32.353,69.288c0.45,0.347,0.988,0.519,1.525,0.519c0.57,0,1.141-0.195,1.605-0.583c0.899-0.752,1.154-2.029,0.614-3.069c-0.164-0.316-16.418-31.888-15.814-54.539c0.214-7.888,11.254-16.837,22.942-26.312c10.705-8.678,22.839-18.514,29.939-30.02c15.586-25.327-1.737-50.231-1.914-50.479c-0.688-0.966-1.958-1.317-3.044-0.84c-1.085,0.478-1.686,1.652-1.438,2.811c0.035,0.164,3.404,16.633-5.97,33.6C169.301,43.634,160.816,49.603,150.99,56.513z"></path>
+                                <path d="M210.365,67.682c0.994-0.749,1.286-2.115,0.684-3.205c-0.602-1.09-1.913-1.571-3.077-1.129c-2.394,0.91-58.627,22.585-58.627,48.776c0,18.053,7.712,27.591,13.343,34.556c2.209,2.731,4.116,5.09,4.744,7.104c1.769,5.804-2.422,16.294-4.184,19.846c-0.508,1.022-0.259,2.259,0.605,3.005c0.467,0.403,1.05,0.607,1.634,0.607c0.497,0,0.996-0.148,1.427-0.448c0.967-0.673,23.63-16.696,19.565-36.001c-1.514-7.337-5.12-12.699-8.302-17.43c-4.929-7.329-8.489-12.624-3.088-22.403C181.419,89.556,210.076,67.899,210.365,67.682z"></path>
+                                <path d="M63.99,177.659c-0.964,2.885-0.509,5.75,1.315,8.283c6.096,8.462,27.688,13.123,60.802,13.123c0.002,0,0.003,0,0.004,0c4.487,0,9.224-0.088,14.076-0.262c52.943-1.896,72.58-18.389,73.39-19.09c0.883-0.764,1.119-2.037,0.57-3.067c-0.549-1.029-1.733-1.546-2.864-1.235c-18.645,5.091-53.463,6.898-77.613,6.898c-27.023,0-40.785-1.946-44.154-3.383c1.729-2.374,12.392-6.613,25.605-9.212c1.263-0.248,2.131-1.414,2.006-2.695c-0.125-1.281-1.201-2.258-2.488-2.258C106.893,164.762,68.05,165.384,63.99,177.659z"></path>
+                                <path d="M241.148,160.673c-10.92,0-21.275,5.472-21.711,5.705c-1.01,0.541-1.522,1.699-1.245,2.811c0.278,1.111,1.277,1.892,2.423,1.893c0.232,0.001,23.293,0.189,25.382,13.365c1.85,11.367-21.82,29.785-31.097,35.923c-1.002,0.663-1.391,1.945-0.926,3.052c0.395,0.943,1.314,1.533,2.304,1.533c0.173,0,0.348-0.018,0.522-0.056c2.202-0.47,53.855-11.852,48.394-41.927C261.862,164.541,250.278,160.673,241.148,160.673z"></path>
+                                <path d="M205.725,216.69c0.18-0.964-0.221-1.944-1.023-2.506l-12.385-8.675c-0.604-0.423-1.367-0.556-2.076-0.368c-0.129,0.034-13.081,3.438-31.885,5.526c-7.463,0.837-15.822,1.279-24.175,1.279c-18.799,0-31.091-2.209-32.881-3.829c-0.237-0.455-0.162-0.662-0.12-0.777c0.325-0.905,2.068-1.98,3.192-2.405c1.241-0.459,1.91-1.807,1.524-3.073c-0.385-1.266-1.69-2.012-2.978-1.702c-12.424,2.998-18.499,7.191-18.057,12.461c0.785,9.343,22.428,14.139,40.725,15.408c2.631,0.18,5.477,0.272,8.456,0.272c0.002,0,0.003,0,0.005,0c30.425,0,69.429-9.546,69.819-9.643C204.818,218.423,205.544,217.654,205.725,216.69z"></path>
+                                <path d="M112.351,236.745c0.938-0.611,1.354-1.77,1.021-2.838c-0.332-1.068-1.331-1.769-2.453-1.755c-1.665,0.044-16.292,0.704-17.316,10.017c-0.31,2.783,0.487,5.325,2.37,7.556c5.252,6.224,19.428,9.923,43.332,11.31c2.828,0.169,5.7,0.254,8.539,0.254c30.39,0,50.857-9.515,51.714-9.92c0.831-0.393,1.379-1.209,1.428-2.127c0.049-0.917-0.409-1.788-1.193-2.267l-15.652-9.555c-0.543-0.331-1.193-0.441-1.813-0.314c-0.099,0.021-10.037,2.082-25.035,4.119c-2.838,0.385-6.392,0.581-10.562,0.581c-14.982,0-31.646-2.448-34.842-4.05C111.843,237.455,111.902,237.075,112.351,236.745z"></path>
+                                <path d="M133.681,290.018c69.61-0.059,106.971-12.438,114.168-20.228c2.548-2.757,2.823-5.366,2.606-7.07c-0.535-4.194-4.354-6.761-4.788-7.04c-1.045-0.672-2.447-0.496-3.262,0.444c-0.813,0.941-0.832,2.314-0.016,3.253c0.439,0.565,0.693,1.51-0.591,2.795c-2.877,2.687-31.897,10.844-80.215,13.294c-6.619,0.345-13.561,0.519-20.633,0.52c-43.262,0-74.923-5.925-79.079-9.379c1.603-2.301,12.801-5.979,24.711-8.058c1.342-0.234,2.249-1.499,2.041-2.845c-0.208-1.346-1.449-2.273-2.805-2.096c-0.336,0.045-1.475,0.115-2.796,0.195c-19.651,1.2-42.36,3.875-43.545,13.999c-0.36,3.086,0.557,5.886,2.726,8.324c5.307,5.963,20.562,13.891,91.475,13.891C133.68,290.018,133.68,290.018,133.681,290.018z"></path>
+                                <path d="M261.522,271.985c-0.984-0.455-2.146-0.225-2.881,0.567c-0.103,0.11-10.568,11.054-42.035,17.48c-12.047,2.414-34.66,3.638-67.211,3.638c-32.612,0-63.643-1.283-63.953-1.296c-1.296-0.063-2.405,0.879-2.581,2.155c-0.177,1.276,0.645,2.477,1.897,2.775c0.323,0.077,32.844,7.696,77.31,7.696c21.327,0,42.08-1.733,61.684-5.151c36.553-6.408,39.112-24.533,39.203-25.301C263.082,273.474,262.504,272.44,261.522,271.985z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <input id="settingsJVMOptsVal" cValue="JVMOptions" serverDependent type="text">
+                </div>
+                <div id="settingsJVMOptsDesc">Las opciones proveídas al JVM. No se debe incluir <em>-Xms</em> o <em>-Xmx</em>.<br><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/<%= process.platform === 'win32' ? 'windows' : 'unix' %>/java.html" id="settingsJvmOptsLink">Opciones disponibles de Java 8</a>.</div>
+            </div>
+        </div>
+        <div id="settingsTabLauncher" class="settingsTab" style="display: none;">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Ajustes de Launcher</span>
+                <span class="settingsTabHeaderDesc">Ajustes relacionados al launcher mismo.</span>
+            </div>
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Permitir Pre-Releases.</span>
+                    <span class="settingsFieldDesc">Las Pre-Releases incluyen nuevas características que pueden no haber sido testeadas al 100%.<br>Esto siempre estará activado si usas una pre-release.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <label class="toggleSwitch">
+                        <input type="checkbox" cValue="AllowPrerelease">
+                        <span class="toggleSwitchSlider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="settingsFileSelContainer">
+                <div class="settingsFileSelContent">
+                    <div class="settingsFieldTitle" id="settingsDataDirTitle">Carpeta de Data</div>
+                    <div class="settingsFileSelActions">
+                        <button class="settingsFileSelIcon" id="settingsDataSelIcon">
+                            <svg class="settingsFileSelSVG">
+                                <g>
+                                    <path fill="gray" d="m10.044745,5c0,0.917174 -0.746246,1.667588 -1.667588,1.667588l-4.168971,0l-2.501382,0c-0.921009,0 -1.667588,0.750415 -1.667588,1.667588l0,6.670353l0,2.501382c0,0.917174 0.746604,1.667588 1.667588,1.667588l16.675882,0c0.921342,0 1.667588,-0.750415 1.667588,-1.667588l0,-2.501382l0,-8.337941c0,-0.917174 -0.746246,-1.667588 -1.667588,-1.667588l-8.337941,0z"/>
+                                    <path fill="gray" d="m1.627815,1.6c-0.921009,0 -1.667588,0.746579 -1.667588,1.667588l0,4.168971l8.337941,0l0,0.833794l11.673118,0l0,-4.168971c0,-0.921009 -0.746246,-1.667588 -1.667588,-1.667588l-8.572237,0c-0.288493,-0.497692 -0.816284,-0.833794 -1.433292,-0.833794l-6.670353,0z"/>
+                                    <path fill="lightgray" d="m10.025276,4c0,0.918984 -0.747719,1.670879 -1.670879,1.670879l-4.177198,0l-2.506319,0c-0.922827,0 -1.670879,0.751896 -1.670879,1.670879l0,6.683517l0,2.506319c0,0.918984 0.748078,1.670879 1.670879,1.670879l16.708794,0c0.923161,0 1.670879,-0.751896 1.670879,-1.670879l0,-2.506319l0,-8.354397c0,-0.918984 -0.747719,-1.670879 -1.670879,-1.670879l-8.354397,0z"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <input class="settingsFileSelVal" type="text" value="null" cValue="DataDirectory" disabled>
+                        <button class="settingsFileSelButton" dialogTitle="Select Data Directory" dialogDirectory="true">Elegir carpeta</button>
+                    </div>
+                </div>
+                <div class="settingsFileSelDesc">Todos los archivos locales serán guardados en esta carpeta.<br>Las screenshots y mundos están guardados en la carpeta de la instancia de la configuración de servidor correspondiente.</div>
+            </div>
+        </div>
+        <div id="settingsTabAbout" class="settingsTab" style="display: none;">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Acerca de</span>
+                <span class="settingsTabHeaderDesc">Revisa información y notas de publicación de la versión actual.</span>
+            </div>
+            <div id="settingsAboutCurrentContainer">
+                <div id="settingsAboutCurrentContent">
+                    <div id="settingsAboutCurrentHeadline">
+                        <img id="settingsAboutLogo" src="./assets/images/SealCircle.png">
+                        <span id="settingsAboutTitle">ZLauncher</span>
+                    </div>
+                    <div id="settingsAboutCurrentVersion">
+                        <div id="settingsAboutCurrentVersionCheck">&#10003;</div>
+                        <div id="settingsAboutCurrentVersionDetails">
+                            <span id="settingsAboutCurrentVersionTitle">Release Estable</span>
+                            <div id="settingsAboutCurrentVersionLine">
+                                <span id="settingsAboutCurrentVersionText">Versión </span>
+                                <span id="settingsAboutCurrentVersionValue">0.0.1-alpha.18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="settingsAboutButtons">
+                    <a href="https://github.com/Zergiv/ZLauncher" id="settingsAboutSourceButton" class="settingsAboutButton">Código Fuente (GitHub)</a>
+                    <!-- The following must be included in third-party usage. -->
+                    <a href="https://github.com/dscalzi/HeliosLauncher" id="settingsAboutSourceButton" class="settingsAboutButton">Fuente Original</a>
+                    <a href="https://github.com/Zergiv/ZLauncher/issues" id="settingsAboutSupportButton" class="settingsAboutButton">Soporte</a>
+                    <a href="#" id="settingsAboutDevToolsButton" class="settingsAboutButton">DevTools</a>
+                </div>
+            </div>
+            <div class="settingsChangelogContainer">
+                <div class="settingsChangelogContent">
+                    <div class="settingsChangelogHeadline">
+                        <div class="settingsChangelogLabel">Notas de Publicación</div>
+                        <div class="settingsChangelogTitle">Changelog</div>
+                    </div>
+                    <div class="settingsChangelogText">
+                        Sin Notas de Publicación
+                    </div>
+                </div>
+                <div class="settingsChangelogActions">
+                    <a class="settingsChangelogButton settingsAboutButton" href="#">Revisar en GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div id="settingsTabUpdate" class="settingsTab" style="display: none;">
+            <div class="settingsTabHeader">
+                <span class="settingsTabHeaderText">Actualizaciones</span>
+                <span class="settingsTabHeaderDesc">Descargar, instalar, y revisar updates del launcher.</span>
+            </div>
+            <div id="settingsUpdateStatusContainer">
+                <div id="settingsUpdateStatusContent">
+                    <div id="settingsUpdateStatusHeadline">
+                        <span id="settingsUpdateTitle">Estás usando la última versión</span>
+                    </div>
+                    <div id="settingsUpdateVersion">
+                        <div id="settingsUpdateVersionCheck">&#10003;</div>
+                        <div id="settingsUpdateVersionDetails">
+                            <span id="settingsUpdateVersionTitle">Release Estable</span>
+                            <div id="settingsUpdateVersionLine">
+                                <span id="settingsUpdateVersionText">Versión </span>
+                                <span id="settingsUpdateVersionValue">0.0.1-alpha.18</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settingsUpdateActionContainer">
+                        <button id="settingsUpdateActionButton">Revisar Updates</button>
+                    </div>
+                </div>
+            </div>
+            <div class="settingsChangelogContainer">
+                <div class="settingsChangelogContent">
+                    <div class="settingsChangelogHeadline">
+                        <div class="settingsChangelogLabel">Qué hay de nuevo</div>
+                        <div class="settingsChangelogTitle">Notas de Update</div>
+                    </div>
+                    <div class="settingsChangelogText">
+                        Sin notas
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/scripts/settings.js"></script>
+</div>

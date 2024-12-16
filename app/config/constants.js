@@ -1,4 +1,4 @@
-const APP_DATA_NAME = 'pylauncher'
+const APP_DATA_NAME = 'ZLauncher'
 const DISTRIBUTION_URL = 'https://techterra.x10.mx/nebula/distribution.json'
 const DISTRIBUTION_META_URL = 'https://techterra.x10.mx/nebula/distrometa.json'
 

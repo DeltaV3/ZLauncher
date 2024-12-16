@@ -1,0 +1,38 @@
+name: Build and Distribute
+
+on:
+  push:
+    branches:
+      - master  # O la rama que usas como principal
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Cambia según la versión que uses
+          cache: 'npm'
+
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Ejecutar la build
+      - name: Build application
+        run: npm run dist
+
+      # 5. Subir artefactos (opcional, para guardar los resultados de la build)
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: zlauncher-build
+          path: dist/  # Cambia según la carpeta donde se generan los archivos

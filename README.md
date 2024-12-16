@@ -4,7 +4,7 @@
 
 <em><h5 align="center">(fork of Helios)</h5></em>
 
-[<p align="center"><img src="https://iili.io/JiHNfov.png" alt="gh actions">](https://github.com/Zergiv/ZLauncher/actions)
+[<p align="center"><img src="https://iili.io/JiHNfov.png" alt="gh actions">](https://github.com/DeltaV3/ZLauncher/actions)
 
 ---
 

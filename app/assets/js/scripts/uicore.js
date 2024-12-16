@@ -49,7 +49,7 @@ if(!isDev){
                 loggerAutoUpdater.info('Nueva actualización disponible', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `https://github.com/Zergiv/ZLauncher/releases/download/v${info.version}/ZLauncher-setup-${info.version}${process.arch === 'arm64' ? '-arm64' : '-x64'}.dmg`
+                    info.darwindownload = `https://github.com/DeltaV3/ZLauncher/releases/download/v${info.version}/ZLauncher-setup-${info.version}${process.arch === 'arm64' ? '-arm64' : '-x64'}.dmg`
                     showUpdateUI(info)
                 }
                 

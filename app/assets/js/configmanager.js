@@ -66,7 +66,7 @@ function resolveSelectedRAM(ram) {
     } else {
         // Legacy behavior
         const mem = os.totalmem()
-        return mem >= (8*1073741824) ? '4G' : (mem >= (6*1073741824) ? '3G' : '2G')
+        return mem >= (8*1073741824) ? '5.5G' : (mem >= (6*1073741824) ? '3G' : '2G')
     }
 }
 
